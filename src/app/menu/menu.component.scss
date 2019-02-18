@@ -1,0 +1,22 @@
+.menu-class {
+    opacity: .75;
+    background-image: url('../../assets/clt.png');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 350px;  
+    display: flex;
+
+    .header-text {
+        margin: auto;
+        color: #fff;
+        font-size: 5em;
+        font-weight: 100;
+        opacity: 1;
+    }
+    .menu-section {
+        button {
+            color: #fff;
+            font-size: 1.25em;
+        }
+    }
+}

@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mongoConnString: 'mongodb://paulmojicatech:M3hHJuOPODCnlYQ0@cluster0-shard-00-00-qdjs6.azure.mongodb.net:27017,cluster0-shard-00-01-qdjs6.azure.mongodb.net:27017,cluster0-shard-00-02-qdjs6.azure.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true'
 };
 
 /*

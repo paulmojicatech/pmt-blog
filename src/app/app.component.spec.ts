@@ -1,12 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { AppRoutes } from './app.routes';
+import { HomeComponent } from './home.component';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HomeComponent
       ],
+      imports: [
+        RouterModule.forRoot(AppRoutes)
+      ]
     }).compileComponents();
   }));
 
@@ -22,10 +29,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('pmt-blog');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should contain the router-outlet markup', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to pmt-blog!');
+    const appEl = fixture.debugElement.nativeElement;
+    const routerEl = appEl.querySelectorAll('router-outlet');
+    expect(routerEl.length).toBe(1, 'router-outlet exists in app component');
   });
 });
